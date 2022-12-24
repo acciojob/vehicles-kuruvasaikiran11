@@ -2,14 +2,18 @@ package com.driver;
 
 public class Vehicle {
 
-    private String name;
-    private int currentSpeed;
+    String name;
+    public int currentSpeed;
     private int currentDirection;
 
     public Vehicle(String name) {
         this.name = name;
         currentSpeed = 0;
         currentDirection = 0;
+    }
+
+    public Vehicle() {
+
     }
 
     public void steer(int direction){
@@ -29,5 +33,7 @@ public class Vehicle {
         currentSpeed = 0;
         System.out.println("stop method called - The vehicle is stopped");
     }
-
+    public int getCurrentDirection(){
+        return currentDirection;
+    }
 }
